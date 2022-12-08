@@ -1,2 +1,2 @@
 # AOC2022
-My Solutions to Advent of Code 2022
+First time doing Advent of Code. Hopefully I can do some of them :)
