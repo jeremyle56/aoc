@@ -7,7 +7,6 @@ for (let i = 0; i < a.length; i++) {
     const bruh = new Set([a[i],a[i+1],a[i+2],a[i+3]])
     if (bruh.size === 4) {
         num = i;
-        console.log(bruh);
         break;
     }
 }
