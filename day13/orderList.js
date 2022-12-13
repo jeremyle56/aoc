@@ -23,8 +23,8 @@ function compare(a, b) {
     }
     return a.length < b.length ? true : a.length > b.length ? false : undefined;
   } else {
-    let nA = typeof a === 'number' ? [a] : a;
-    let nB = typeof b === 'number' ? [b] : b;
+    const nA = typeof a === 'number' ? [a] : a;
+    const nB = typeof b === 'number' ? [b] : b;
     return compare(nA, nB);
   }
 }
