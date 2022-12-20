@@ -1,5 +1,4 @@
 const fs = require('fs');
-const { listenerCount } = require('process');
 
 const parseInput = () => {
   const input = fs.readFileSync('./input.txt', 'utf-8')
