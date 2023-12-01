@@ -2,7 +2,7 @@
 
 I don't know what language I'll use, probably C++ to start.
 
-C++ Template curiosity of https://github.com/osalbahr. Inspired and modified.
+C++ Template courtesy of https://github.com/osalbahr. Inspired and modified.
 
 # Example use of Template
 
