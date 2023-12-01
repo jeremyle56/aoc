@@ -1,8 +1,8 @@
+# Exclude Executables (files without file extensions)
 *
 !Makefile
 !*.*
 !*/
-*.txt
 
 # Exclude input files
 *.txt
