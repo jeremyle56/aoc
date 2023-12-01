@@ -1,8 +1,6 @@
-# AOC2022
-First time doing Advent of Code. Hopefully I can do some of them :)
+# Advent of Code
 
-First two days in C, rest probably in Javascript (maybe python if I learn it).
+AOC is hard...
 
-Skipped day19
-
-Sorry, day 5 includes input in file because I don't know how to read the columns. 
+2022: 38\*
+2023: 0\*
