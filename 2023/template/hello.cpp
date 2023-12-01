@@ -4,7 +4,7 @@ using namespace std;
 #define ll long long
 
 #define deb(x) cout << #x << "=" << x << endl
-#define deb2(x,y) cout << #x << "=" << x << "," << #y << "=" << y << endl
+#define deb2(x, y) cout << #x << "=" << x << "," << #y << "=" << y << endl
 
 #define pb push_back
 
@@ -33,9 +33,6 @@ static bool readFile(vector<string> &lines) {
 // Part 1 Solution
 void solve_p1(vector<string> &lines) {
     int res = 0;
-    for (const auto &line : lines) {
-        if (!line.empty()) res += stoull(line);
-    }
 
     cout << "Answer for Part 1:" << res << endl;
 }

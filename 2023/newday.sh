@@ -12,8 +12,7 @@ cd "$1" || exit
 mv hello.cpp "$1".cpp
 
 # Edit the Makefile accordingly
-str="s/hello/$1/g"
-sed -i -e "$str" Makefile
+sed -i -e "s/hello/{$1}/g" Makefile
 
 # Create empty input file
 touch input.txt
