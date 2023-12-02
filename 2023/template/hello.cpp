@@ -5,6 +5,8 @@ using namespace std;
 
 #define deb(x) cout << #x << "=" << x << endl
 #define deb2(x, y) cout << #x << "=" << x << "," << #y << "=" << y << endl
+#define print(x) \
+    for (auto i : x) cout << i << ' '
 
 #define pb push_back
 
@@ -37,7 +39,7 @@ static bool readFile(vector<string> &lines) {
 void solve_p1(vector<string> &lines) {
     int res = 0;
 
-    cout << "Answer for Part 1:" << res << endl;
+    cout << "Answer for Part 1: " << res << endl;
 }
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -46,7 +48,7 @@ void solve_p1(vector<string> &lines) {
 void solve_p2(vector<string> &lines) {
     int res = 0;
 
-    cout << "Answer for Part 2:" << res << endl;
+    cout << "Answer for Part 2: " << res << endl;
 }
 
 ///////////////////////////////////////////////////////////////////////////////
