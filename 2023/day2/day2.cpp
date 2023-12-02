@@ -37,21 +37,20 @@ static bool readFile(vector<string> &lines) {
 
 // Part 1 Solution
 void solve_p1(vector<string> &lines) {
-    vector<vector<vector<pair<int, string>>>> games;
-
     int res = 0;
 
     for (size_t i = 0; i < lines.size(); ++i) {
         auto line = lines[i];
-        vector<vector<pair<int, string>>> game;
         line = line.substr(line.find(": ") + 1, line.size());
+
         istringstream iss(line);
         string reveal;
         bool flag = true;
+
         while (getline(iss, reveal, ';')) {
             istringstream iss2(reveal);
             string instance;
-            vector<pair<int, string>> instances;
+
             while (getline(iss2, instance, ',')) {
                 instance = regex_replace(instance, regex("^ +| +$|( ) +"), "$1");
                 istringstream iss3(instance);
@@ -64,13 +63,10 @@ void solve_p1(vector<string> &lines) {
 
                 int number = stoull(data[0]);
                 string colour = data[1];
-                instances.push_back(make_pair(number, colour));
                 if ((colour == "red" && number > 12) || (colour == "green" && number > 13) || (colour == "blue" && number > 14)) flag = false;
             }
-            game.push_back(instances);
         }
         if (flag) res += (i + 1);
-        games.push_back(game);
     }
 
     cout << "Answer for Part 1: " << res << endl;
@@ -80,23 +76,22 @@ void solve_p1(vector<string> &lines) {
 
 // Part 2 Solution
 void solve_p2(vector<string> &lines) {
-    vector<vector<vector<pair<int, string>>>> games;
-
     int res = 0;
 
     for (size_t i = 0; i < lines.size(); ++i) {
         auto line = lines[i];
-        vector<vector<pair<int, string>>> game;
         line = line.substr(line.find(": ") + 1, line.size());
+
         istringstream iss(line);
         string reveal;
         int maxRed = 0;
         int maxGreen = 0;
         int maxBlue = 0;
+
         while (getline(iss, reveal, ';')) {
             istringstream iss2(reveal);
             string instance;
-            vector<pair<int, string>> instances;
+
             while (getline(iss2, instance, ',')) {
                 instance = regex_replace(instance, regex("^ +| +$|( ) +"), "$1");
                 istringstream iss3(instance);
@@ -110,16 +105,15 @@ void solve_p2(vector<string> &lines) {
                 int number = stoull(data[0]);
                 string colour = data[1];
 
-                if (colour == "red") maxRed = max(number, maxRed);
-                else if (colour == "green") maxGreen = max(number, maxGreen);
-                else if (colour == "blue") maxBlue = max(number, maxBlue);
-
-                instances.push_back(make_pair(number, colour));
+                if (colour == "red")
+                    maxRed = max(number, maxRed);
+                else if (colour == "green")
+                    maxGreen = max(number, maxGreen);
+                else if (colour == "blue")
+                    maxBlue = max(number, maxBlue);
             }
-            game.push_back(instances);
         }
         res += (maxRed * maxGreen * maxBlue);
-        games.push_back(game);
     }
 
     cout << "Answer for Part 2: " << res << endl;
