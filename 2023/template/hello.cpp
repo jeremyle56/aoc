@@ -1,36 +1,4 @@
-#include <bits/stdc++.h>
-using namespace std;
-
-#define ll long long
-
-#define deb(x) cout << #x << "=" << x << endl
-#define deb2(x, y) cout << #x << "=" << x << "," << #y << "=" << y << endl
-#define print(x) \
-    for (auto i : x) cout << i << ' '
-
-#define pb push_back
-
-#define all(x) x.begin(), x.end()
-#define sortAll(x) sort(all(x))
-
-const string INPUT_FILE_NAME = "input.txt";
-
-// Reads file from input files into a vector
-static bool readFile(vector<string> &lines) {
-    ifstream file(INPUT_FILE_NAME);
-    if (!file) {
-        cerr << "Cannot open file" << INPUT_FILE_NAME << endl;
-        return false;
-    }
-
-    string line;
-    while (getline(file, line)) {
-        lines.push_back(line);
-    }
-
-    file.close();
-    return true;
-}
+#include "../utils.h"
 
 ///////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////
