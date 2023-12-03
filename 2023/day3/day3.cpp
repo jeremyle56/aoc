@@ -9,13 +9,16 @@ bool isPartFunc(int i, int j, vector<vector<char>> &schematic) {
 }
 
 // Given coordinates, checks if they are valid and partNumber
-bool isGearFunc(int i, int j, int n, int m, vector<vector<char>> &schematic) {
+bool isGearFunc(int i, int j, vector<vector<char>> &schematic) {
+    int n = schematic.size();
+    int m = schematic[0].size();
     if (i < 0 || j < 0 || i > n - 1 || j > m - 1) return false;
     return isdigit(schematic[i][j]);
 }
 
 // Given any position of a partNumber, get the full number
-string getNumber(int i, int j, int m, vector<vector<char>> &schematic) {
+string getNumber(int i, int j, vector<vector<char>> &schematic) {
+    int m = schematic[0].size();
     for (; j > 0 && isdigit(schematic[i][j]); --j) {
     }
 
@@ -73,60 +76,60 @@ void solve_p2(vector<vector<char>> &schematic) {
 
             if (schematic[i][j] == '*') {
                 // Check all combinations of part number above possible gear
-                if (isGearFunc(i - 1, j - 1, rows, cols, schematic) && isGearFunc(i - 1, j, rows, cols, schematic) &&
-                    isGearFunc(i - 1, j + 1, rows, cols, schematic)) {
+                if (isGearFunc(i - 1, j - 1, schematic) && isGearFunc(i - 1, j, schematic) &&
+                    isGearFunc(i - 1, j + 1, schematic)) {
                     partCount++;
-                    string num = getNumber(i - 1, j - 1, cols, schematic);
+                    string num = getNumber(i - 1, j - 1, schematic);
                     if (!num.empty()) numbers.pb(num);
-                } else if (isGearFunc(i - 1, j - 1, rows, cols, schematic) && isGearFunc(i - 1, j, rows, cols, schematic)) {
+                } else if (isGearFunc(i - 1, j - 1, schematic) && isGearFunc(i - 1, j, schematic)) {
                     partCount++;
-                    string num = getNumber(i - 1, j - 1, cols, schematic);
+                    string num = getNumber(i - 1, j - 1, schematic);
                     if (!num.empty()) numbers.pb(num);
-                } else if (isGearFunc(i - 1, j, rows, cols, schematic) && isGearFunc(i - 1, j + 1, rows, cols, schematic)) {
+                } else if (isGearFunc(i - 1, j, schematic) && isGearFunc(i - 1, j + 1, schematic)) {
                     partCount++;
-                    string num = getNumber(i - 1, j, cols, schematic);
+                    string num = getNumber(i - 1, j, schematic);
                     if (!num.empty()) numbers.pb(num);
                 } else {
                     for (auto &dir : dirs1) {
-                        if (isGearFunc(i - 1, j + dir, rows, cols, schematic)) {
+                        if (isGearFunc(i - 1, j + dir, schematic)) {
                             partCount++;
-                            string num = getNumber(i - 1, j + dir, cols, schematic);
+                            string num = getNumber(i - 1, j + dir, schematic);
                             if (!num.empty()) numbers.pb(num);
                         }
                     }
                 }
 
                 // Check to the left and right
-                if (isGearFunc(i, j - 1, rows, cols, schematic)) {
+                if (isGearFunc(i, j - 1, schematic)) {
                     partCount++;
-                    string num = getNumber(i, j - 1, cols, schematic);
+                    string num = getNumber(i, j - 1, schematic);
                     if (!num.empty()) numbers.pb(num);
                 }
-                if (isGearFunc(i, j + 1, rows, cols, schematic)) {
+                if (isGearFunc(i, j + 1, schematic)) {
                     partCount++;
-                    string num = getNumber(i, j + 1, cols, schematic);
+                    string num = getNumber(i, j + 1, schematic);
                     if (!num.empty()) numbers.pb(num);
                 }
 
                 // Check all possible combinations of parts below gear
-                if (isGearFunc(i + 1, j - 1, rows, cols, schematic) && isGearFunc(i + 1, j, rows, cols, schematic) &&
-                    isGearFunc(i + 1, j + 1, rows, cols, schematic)) {
+                if (isGearFunc(i + 1, j - 1, schematic) && isGearFunc(i + 1, j, schematic) &&
+                    isGearFunc(i + 1, j + 1, schematic)) {
                     partCount++;
-                    string num = getNumber(i + 1, j - 1, cols, schematic);
+                    string num = getNumber(i + 1, j - 1, schematic);
                     if (!num.empty()) numbers.pb(num);
-                } else if (isGearFunc(i + 1, j - 1, rows, cols, schematic) && isGearFunc(i + 1, j, rows, cols, schematic)) {
+                } else if (isGearFunc(i + 1, j - 1, schematic) && isGearFunc(i + 1, j, schematic)) {
                     partCount++;
-                    string num = getNumber(i + 1, j - 1, cols, schematic);
+                    string num = getNumber(i + 1, j - 1, schematic);
                     if (!num.empty()) numbers.pb(num);
-                } else if (isGearFunc(i + 1, j, rows, cols, schematic) && isGearFunc(i + 1, j + 1, rows, cols, schematic)) {
+                } else if (isGearFunc(i + 1, j, schematic) && isGearFunc(i + 1, j + 1, schematic)) {
                     partCount++;
-                    string num = getNumber(i + 1, j, cols, schematic);
+                    string num = getNumber(i + 1, j, schematic);
                     if (!num.empty()) numbers.pb(num);
                 } else {
                     for (auto &dir : dirs1) {
-                        if (isGearFunc(i + 1, j + dir, rows, cols, schematic)) {
+                        if (isGearFunc(i + 1, j + dir, schematic)) {
                             partCount++;
-                            string num = getNumber(i + 1, j + dir, cols, schematic);
+                            string num = getNumber(i + 1, j + dir, schematic);
                             if (!num.empty()) numbers.pb(num);
                         }
                     }
