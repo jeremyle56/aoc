@@ -54,7 +54,7 @@ void solve_p1(vector<vector<char>> &schematic) {
                 }
                 number += schematic[i][j];
             }
-            if (isPart) sum += stoull(number);
+            if (isPart) sum += stoi(number);
         }
     }
 
@@ -135,7 +135,7 @@ void solve_p2(vector<vector<char>> &schematic) {
                     }
                 }
 
-                if (partCount == 2) ratio += stoull(numbers[0]) * stoull(numbers[1]);
+                if (partCount == 2) ratio += stoi(numbers[0]) * stoi(numbers[1]);
             }
         }
     }
