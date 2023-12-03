@@ -1,17 +1,20 @@
 #include "../utils.h"
 
-bool isPartFunc(int i, int j, int n, int m, vector<vector<char>> &schematic) {
-    if (i < 0 || j < 0 || i > n - 1 || j > m - 1)
-        return false;
+// Given coordinates, checks if they are valid and symbol
+bool isPartFunc(int i, int j, vector<vector<char>> &schematic) {
+    int n = schematic.size();
+    int m = schematic[0].size();
+    if (i < 0 || j < 0 || i > n - 1 || j > m - 1) return false;
     return !isdigit(schematic[i][j]) && schematic[i][j] != '.';
 }
 
+// Given coordinates, checks if they are valid and partNumber
 bool isGearFunc(int i, int j, int n, int m, vector<vector<char>> &schematic) {
-    if (i < 0 || j < 0 || i > n - 1 || j > m - 1)
-        return false;
+    if (i < 0 || j < 0 || i > n - 1 || j > m - 1) return false;
     return isdigit(schematic[i][j]);
 }
 
+// Given any position of a partNumber, get the full number
 string getNumber(int i, int j, int m, vector<vector<char>> &schematic) {
     for (; j > 0 && isdigit(schematic[i][j]); --j) {
     }
@@ -25,6 +28,9 @@ string getNumber(int i, int j, int m, vector<vector<char>> &schematic) {
 
     return number;
 }
+
+const vector<vector<int>> dirs = {{-1, -1}, {-1, 0}, {-1, 1}, {0, -1}, {0, 1}, {1, -1}, {1, 0}, {1, 1}};
+const vector<int> dirs1 = {-1, 0, 1};
 
 ///////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////
@@ -40,22 +46,9 @@ void solve_p1(vector<vector<char>> &schematic) {
             bool isPart = false;
             string number = "";
             for (; j < cols && isdigit(schematic[i][j]); ++j) {
-                if (isPartFunc(i - 1, j - 1, rows, cols, schematic))
-                    isPart = true;
-                else if (isPartFunc(i - 1, j, rows, cols, schematic))
-                    isPart = true;
-                else if (isPartFunc(i - 1, j + 1, rows, cols, schematic))
-                    isPart = true;
-                else if (isPartFunc(i, j - 1, rows, cols, schematic))
-                    isPart = true;
-                else if (isPartFunc(i, j + 1, rows, cols, schematic))
-                    isPart = true;
-                else if (isPartFunc(i + 1, j - 1, rows, cols, schematic))
-                    isPart = true;
-                else if (isPartFunc(i + 1, j, rows, cols, schematic))
-                    isPart = true;
-                else if (isPartFunc(i + 1, j + 1, rows, cols, schematic))
-                    isPart = true;
+                for (auto &dir : dirs) {
+                    if (isPartFunc(i + dir[0], j + dir[1], schematic)) isPart = true;
+                }
                 number += schematic[i][j];
             }
             if (isPart) sum += stoull(number);
@@ -77,8 +70,11 @@ void solve_p2(vector<vector<char>> &schematic) {
         for (int j = 0; j < cols; ++j) {
             int partCount = 0;
             vector<string> numbers;
+
             if (schematic[i][j] == '*') {
-                if (isGearFunc(i - 1, j - 1, rows, cols, schematic) && isGearFunc(i - 1, j, rows, cols, schematic) && isGearFunc(i - 1, j + 1, rows, cols, schematic)) {
+                // Check all combinations of part number above possible gear
+                if (isGearFunc(i - 1, j - 1, rows, cols, schematic) && isGearFunc(i - 1, j, rows, cols, schematic) &&
+                    isGearFunc(i - 1, j + 1, rows, cols, schematic)) {
                     partCount++;
                     string num = getNumber(i - 1, j - 1, cols, schematic);
                     if (!num.empty()) numbers.pb(num);
@@ -91,23 +87,16 @@ void solve_p2(vector<vector<char>> &schematic) {
                     string num = getNumber(i - 1, j, cols, schematic);
                     if (!num.empty()) numbers.pb(num);
                 } else {
-                    if (isGearFunc(i - 1, j - 1, rows, cols, schematic)) {
-                        partCount++;
-                        string num = getNumber(i - 1, j - 1, cols, schematic);
-                        if (!num.empty()) numbers.pb(num);
-                    }
-                    if (isGearFunc(i - 1, j, rows, cols, schematic)) {
-                        partCount++;
-                        string num = getNumber(i - 1, j, cols, schematic);
-                        if (!num.empty()) numbers.pb(num);
-                    }
-                    if (isGearFunc(i - 1, j + 1, rows, cols, schematic)) {
-                        partCount++;
-                        string num = getNumber(i - 1, j + 1, cols, schematic);
-                        if (!num.empty()) numbers.pb(num);
+                    for (auto &dir : dirs1) {
+                        if (isGearFunc(i - 1, j + dir, rows, cols, schematic)) {
+                            partCount++;
+                            string num = getNumber(i - 1, j + dir, cols, schematic);
+                            if (!num.empty()) numbers.pb(num);
+                        }
                     }
                 }
 
+                // Check to the left and right
                 if (isGearFunc(i, j - 1, rows, cols, schematic)) {
                     partCount++;
                     string num = getNumber(i, j - 1, cols, schematic);
@@ -119,7 +108,9 @@ void solve_p2(vector<vector<char>> &schematic) {
                     if (!num.empty()) numbers.pb(num);
                 }
 
-                if (isGearFunc(i + 1, j - 1, rows, cols, schematic) && isGearFunc(i + 1, j, rows, cols, schematic) && isGearFunc(i + 1, j + 1, rows, cols, schematic)) {
+                // Check all possible combinations of parts below gear
+                if (isGearFunc(i + 1, j - 1, rows, cols, schematic) && isGearFunc(i + 1, j, rows, cols, schematic) &&
+                    isGearFunc(i + 1, j + 1, rows, cols, schematic)) {
                     partCount++;
                     string num = getNumber(i + 1, j - 1, cols, schematic);
                     if (!num.empty()) numbers.pb(num);
@@ -132,29 +123,20 @@ void solve_p2(vector<vector<char>> &schematic) {
                     string num = getNumber(i + 1, j, cols, schematic);
                     if (!num.empty()) numbers.pb(num);
                 } else {
-                    if (isGearFunc(i + 1, j - 1, rows, cols, schematic)) {
-                        partCount++;
-                        string num = getNumber(i + 1, j - 1, cols, schematic);
-                        if (!num.empty()) numbers.pb(num);
-                    }
-                    if (isGearFunc(i + 1, j, rows, cols, schematic)) {
-                        partCount++;
-                        string num = getNumber(i + 1, j, cols, schematic);
-                        if (!num.empty()) numbers.pb(num);
-                    }
-                    if (isGearFunc(i + 1, j + 1, rows, cols, schematic)) {
-                        partCount++;
-                        string num = getNumber(i + 1, j + 1, cols, schematic);
-                        if (!num.empty()) numbers.pb(num);
+                    for (auto &dir : dirs1) {
+                        if (isGearFunc(i + 1, j + dir, rows, cols, schematic)) {
+                            partCount++;
+                            string num = getNumber(i + 1, j + dir, cols, schematic);
+                            if (!num.empty()) numbers.pb(num);
+                        }
                     }
                 }
 
-                if (partCount == 2) {
-                    ratio += stoull(numbers[0]) * stoull(numbers[1]);
-                }
+                if (partCount == 2) ratio += stoull(numbers[0]) * stoull(numbers[1]);
             }
         }
     }
+
     cout << "Answer for Part 2: " << ratio << endl;
 }
 
