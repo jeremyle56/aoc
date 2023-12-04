@@ -2,11 +2,13 @@
 using namespace std;
 
 #define ll long long
+#define vi vector<int>
+#define pii pair<int, int>
 
 #define deb(x) cout << #x << "=" << x << endl
 #define deb2(x, y) cout << #x << "=" << x << "," << #y << "=" << y << endl
-#define print(x)                       \
-    for (auto i : x) cout << i << ' '; \
+#define print(x)                        \
+    for (auto &i : x) cout << i << ' '; \
     cout << endl;
 
 #define pb push_back

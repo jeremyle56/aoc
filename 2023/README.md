@@ -2,6 +2,8 @@
 
 I don't know what language I'll use, probably C++ to start.
 
+- Day 4: Python (have exam next day no time)
+
 C++ Template courtesy of https://github.com/osalbahr. Inspired and modified.
 
 # Example use of Template
