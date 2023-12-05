@@ -37,9 +37,9 @@ def solve_p2():
     reverse = lines
     reverse.reverse()
 
-    loc = 10000000
+    loc = 88151870
     moved = False
-    currPos = 0
+    currPos = 88151870
 
     while True:
         for line in reverse:
@@ -49,14 +49,15 @@ def solve_p2():
 
             line = [int(i) for i in line.split()]
             [dest, src, length] = line
-            if currPos >= dest and currPos < dest + length and not moved:
+
+            if dest <= currPos < dest + length and not moved:
                 currPos = src + (currPos - dest)
                 moved = True
 
-        if currPos in seedsMap or loc == 88151870:
+        if currPos in seedsMap:
             break
         else:
-            loc += 1
+            loc -= 1
             moved = False
             currPos = loc
 
