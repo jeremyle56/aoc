@@ -3,7 +3,7 @@
 I don't know what language I'll use, probably C++ to start.
 
 - Day 1-3: C++
-- Day 4: Python (have exam next day no time)
+- Day 4-5: Python (no time)
 
 C++ Template courtesy of https://github.com/osalbahr. Inspired and modified.
 
