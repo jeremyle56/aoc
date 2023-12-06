@@ -20,7 +20,7 @@ C++ Template courtesy of https://github.com/osalbahr. Inspired and modified.
 ## Folder Creation
 
 ```bash
-$ ./newday.sh day24 # Add "&& code day24" if you also want to open it in Visual Studio Code
+$ ./newday.sh day24    # Add "&& code day24" if you also want to open it in Visual Studio Code
 $ ./newday_py.sh day24 # For Python template
 ```
 
@@ -33,8 +33,9 @@ $ make # Only for C++
 
 ## Running Code on Input
 
-Edit `input.txt` with your input.
+Edit `input.txt` with your input then to run your code:
 
 ```bash
-$ ./day24
+$ ./day24          # For C++
+$ python3 day24.py # For Python
 ```
