@@ -6,12 +6,12 @@ Progress: 11/12 ⭐
 
 | Day                                                                           | Language                                         | Stars |
 | ----------------------------------------------------------------------------- | ------------------------------------------------ | ----- |
-| [Day 1: Trebuchet?!](https://adventofcode.com/2023/day/1)                     | [C++](./day1/day1.cpp)                           | ⭐⭐  |
-| [Day 2: Cube Conundrum](https://adventofcode.com/2023/day/2)                  | [C++](./day2/day2.cpp)                           | ⭐⭐  |
-| [Day 3: Gear Ratios](https://adventofcode.com/2023/day/3)                     | [C++](./day3/day3.cpp)                           | ⭐⭐  |
-| [Day 4: Scratchcards](https://adventofcode.com/2023/day/4)                    | [Python](./day4/day4.py)                         | ⭐⭐  |
-| [Day 5: If You Give A Seed A Fertilizer](https://adventofcode.com/2023/day/5) | [Python](./day5/day5.py)                         | ⭐❌  |
-| [Day 6: Wait For It](https://adventofcode.com/2023/day/6)                     | [Python](./day6/day6.py), [C++](./day6/day6.cpp) | ⭐⭐  |
+| [Day 1: Trebuchet?!](https://adventofcode.com/2023/day/1)                     | [C++](./day01/day01.cpp)                           | ⭐⭐  |
+| [Day 2: Cube Conundrum](https://adventofcode.com/2023/day/2)                  | [C++](./day02/day02.cpp)                           | ⭐⭐  |
+| [Day 3: Gear Ratios](https://adventofcode.com/2023/day/3)                     | [C++](./day03/day03.cpp)                           | ⭐⭐  |
+| [Day 4: Scratchcards](https://adventofcode.com/2023/day/4)                    | [Python](./day04/day04.py)                         | ⭐⭐  |
+| [Day 5: If You Give A Seed A Fertilizer](https://adventofcode.com/2023/day/5) | [Python](./day05/day05.py)                         | ⭐❌  |
+| [Day 6: Wait For It](https://adventofcode.com/2023/day/6)                     | [Python](./day06/day06.py), [C++](./day06/day06.cpp) | ⭐⭐  |
 
 C++ Template courtesy of https://github.com/osalbahr. Inspired and modified.
 
