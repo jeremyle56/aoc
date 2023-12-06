@@ -2,8 +2,8 @@ CC = gcc
 CXX = g++
 CPPFLAGS = -Wall -g -O2
 
-EXE = hello
-SRC_FILES = hello.cpp ../utils.cpp
+EXE = day6
+SRC_FILES =day6.cpp ../utils.cpp
 
 all: $(EXE)
 

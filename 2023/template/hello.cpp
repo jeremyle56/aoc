@@ -4,7 +4,7 @@
 ///////////////////////////////////////////////////////////////////////////////
 
 // Part 1 Solution
-void solve_p1(vector<string> &lines) {
+void solveP1(vector<string> &lines) {
     int res = 0;
 
     cout << "Answer for Part 1: " << res << endl;
@@ -13,7 +13,7 @@ void solve_p1(vector<string> &lines) {
 ///////////////////////////////////////////////////////////////////////////////
 
 // Part 2 Solution
-void solve_p2(vector<string> &lines) {
+void solveP2(vector<string> &lines) {
     int res = 0;
 
     cout << "Answer for Part 2: " << res << endl;
@@ -29,7 +29,7 @@ int main() {
         return EXIT_FAILURE;
     }
 
-    solve_p1(lines);
-    solve_p2(lines);
+    solveP1(lines);
+    solveP2(lines);
     return EXIT_SUCCESS;
 }
