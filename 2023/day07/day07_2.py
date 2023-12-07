@@ -2,8 +2,9 @@ import collections, math, sys, re
 
 
 def determine_rank(cards):
-    if "J" in cards:
-        return determine_rank_j(cards)
+    if "J" in cards and cards.count("J") != 5:
+        most_common = collections.Counter(cards.replace("J", "")).most_common(1)[0][0]
+        cards = cards.replace("J", most_common)
 
     if len(set(cards) & set(types)) == 1:
         return "Five"
@@ -23,16 +24,6 @@ def determine_rank(cards):
         return "One"
     else:
         return "High"
-
-
-def determine_rank_j(cards):
-    if cards.count("J") == 5:
-        return "Five"
-
-    most_common = collections.Counter(cards.replace("J", "")).most_common(1)[0][0]
-    temp = cards.replace("J", most_common)
-
-    return determine_rank(temp)
 
 
 # Insert position

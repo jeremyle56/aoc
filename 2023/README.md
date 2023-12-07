@@ -2,16 +2,17 @@
 
 I don't know what language I'll use, probably C++ to start.
 
-Progress: 11/12 ⭐
+Progress: 13/14 ⭐
 
-| Day                                                                           | Language                                         | Stars |
-| ----------------------------------------------------------------------------- | ------------------------------------------------ | ----- |
-| [Day 1: Trebuchet?!](https://adventofcode.com/2023/day/1)                     | [C++](./day01/day01.cpp)                           | ⭐⭐  |
-| [Day 2: Cube Conundrum](https://adventofcode.com/2023/day/2)                  | [C++](./day02/day02.cpp)                           | ⭐⭐  |
-| [Day 3: Gear Ratios](https://adventofcode.com/2023/day/3)                     | [C++](./day03/day03.cpp)                           | ⭐⭐  |
-| [Day 4: Scratchcards](https://adventofcode.com/2023/day/4)                    | [Python](./day04/day04.py)                         | ⭐⭐  |
-| [Day 5: If You Give A Seed A Fertilizer](https://adventofcode.com/2023/day/5) | [Python](./day05/day05.py)                         | ⭐❌  |
-| [Day 6: Wait For It](https://adventofcode.com/2023/day/6)                     | [Python](./day06/day06.py), [C++](./day06/day06.cpp) | ⭐⭐  |
+| Day                                                                           | Language                                                   | Stars |
+| ----------------------------------------------------------------------------- | ---------------------------------------------------------- | ----- |
+| [Day 1: Trebuchet?!](https://adventofcode.com/2023/day/1)                     | [C++](./day01/day01.cpp)                                   | ⭐⭐  |
+| [Day 2: Cube Conundrum](https://adventofcode.com/2023/day/2)                  | [C++](./day02/day02.cpp)                                   | ⭐⭐  |
+| [Day 3: Gear Ratios](https://adventofcode.com/2023/day/3)                     | [C++](./day03/day03.cpp)                                   | ⭐⭐  |
+| [Day 4: Scratchcards](https://adventofcode.com/2023/day/4)                    | [Python](./day04/day04.py)                                 | ⭐⭐  |
+| [Day 5: If You Give A Seed A Fertilizer](https://adventofcode.com/2023/day/5) | [Python](./day05/day05.py)                                 | ⭐❌  |
+| [Day 6: Wait For It](https://adventofcode.com/2023/day/6)                     | [Python](./day06/day06.py), [C++](./day06/day06.cpp)       | ⭐⭐  |
+| [Day 7: Camel Cards](https://adventofcode.com/2023/day/7)                     | Python: [P1](./day07/day07_1.py), [P2](./day07/day07_2.py) | ⭐⭐  |
 
 C++ Template courtesy of https://github.com/osalbahr. Inspired and modified.
 
