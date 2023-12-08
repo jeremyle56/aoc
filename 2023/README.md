@@ -13,6 +13,7 @@ Progress: 13/14 ⭐
 | [Day 5: If You Give A Seed A Fertilizer](https://adventofcode.com/2023/day/5) | [Python](./day05/day05.py)                                 | ⭐❌  |
 | [Day 6: Wait For It](https://adventofcode.com/2023/day/6)                     | [Python](./day06/day06.py), [C++](./day06/day06.cpp)       | ⭐⭐  |
 | [Day 7: Camel Cards](https://adventofcode.com/2023/day/7)                     | Python: [P1](./day07/day07_1.py), [P2](./day07/day07_2.py) | ⭐⭐  |
+| [Day 8: Haunted Wasteland](https://adventofcode.com/2023/day/8)               | [Python](./day08/day08.py)                                 | ⭐⭐  |
 
 C++ Template courtesy of https://github.com/osalbahr. Inspired and modified.
 
