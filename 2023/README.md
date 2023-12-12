@@ -2,7 +2,7 @@
 
 I don't know what language I'll use, probably C++ to start.
 
-Progress: 21/22 ⭐
+Progress: 23/24 ⭐
 
 | Day                                                                           | Language                                                   | Stars |
 | ----------------------------------------------------------------------------- | ---------------------------------------------------------- | ----- |
@@ -17,6 +17,7 @@ Progress: 21/22 ⭐
 | [Day 9: Mirage Maintenance](https://adventofcode.com/2023/day/9)              | [Python](./day09/day09.py)                                 | ⭐⭐  |
 | [Day 10: Pipe Maze](https://adventofcode.com/2023/day/10)                     | [Python](./day10/day10.py)                                 | ⭐⭐  |
 | [Day 11: Cosmic Expansion](https://adventofcode.com/2023/day/11)              | [Python](./day11/day11.py)                                 | ⭐⭐  |
+| [Day 12: Hot Springs](https://adventofcode.com/2023/day/12)                   | [Python](./day12/day12.py)                                 | ⭐⭐  |
 
 C++ Template courtesy of https://github.com/osalbahr. Inspired and modified.
 
