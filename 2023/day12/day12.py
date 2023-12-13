@@ -43,15 +43,7 @@ def solve_p1():
 
 
 def solve_p2():
-    springs = [i.split()[0] for i in lines]
-    temp = []
-    for i in range(len(springs)):
-        spring = []
-        for _ in range(5):
-            spring.append(springs[i])
-        temp.append(spring)
-
-    springs = ["?".join(i) + "." for i in temp]
+    springs = ["?".join([i.split()[0]] * 5) + "." for i in lines]
     groups = [[int(i) for i in j.split()[1].split(",")] * 5 for j in lines]
 
     res = 0
