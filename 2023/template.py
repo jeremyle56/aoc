@@ -1,12 +1,11 @@
-import collections, math, sys, re
+import sys
 
 ###############################################################################
 
 
 def solve_p1():
     res = 0
-
-    print(f"Answer for Part 1: {res}")
+    return res
 
 
 ###############################################################################
@@ -14,13 +13,13 @@ def solve_p1():
 
 def solve_p2():
     res = 0
-
-    print(f"Answer for Part 2: {res}")
+    return res
 
 
 ###############################################################################
 
+input_file = "test.txt" if "test" in sys.argv else "input.txt"
+lines = open(input_file).read().splitlines()
 
-lines = open("input.txt").read().splitlines()
-solve_p1()
-solve_p2()
+print(f"Answer for Part 1: {solve_p1()}")
+print(f"Answer for Part 2: {solve_p2()}")

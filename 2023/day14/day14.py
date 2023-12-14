@@ -76,7 +76,7 @@ def solve_p2():
 
     # Problem required 1000000000 cycles but
     # after a point they are cyclic so no point, so use smaller number
-    for _ in range(10000):
+    for _ in range(1000):
         north_tilt(tilted)
         west_tilt(tilted)
         south_tilt(tilted)

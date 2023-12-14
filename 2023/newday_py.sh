@@ -14,3 +14,4 @@ mv template.py "$1".py
 
 # Create empty input file
 touch input.txt
+touch test.txt
