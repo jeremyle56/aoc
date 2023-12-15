@@ -35,7 +35,7 @@ def solve_p2():
         if "=" in s:
             boxes[box_num][label] = focal
         else:
-            boxes[box_num].pop(label)
+            boxes[box_num].pop(label, "bruh")
 
     res = 0
     for i, box in boxes.items():
