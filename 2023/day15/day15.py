@@ -21,29 +21,26 @@ def solve_p1():
 
 
 def solve_p2():
-    boxes = {i: [] for i in range(256)}
+    boxes = {i: {} for i in range(256)}
 
     for s in lines:
-        label = s.split("-")[0]
-        if "=" not in label:
-            hash_value = hash(label)
-            boxes[hash_value] = [i for i in boxes[hash_value] if i[0] != label]
+        focal = None
+        if "-" in s:
+            label = s.split("-")[0]
         else:
             label = s.split("=")[0]
             focal = int(s.split("=")[1])
-            hash_value = hash(label)
-            hasLabel = [i for i in boxes[hash_value] if i[0] == label]
-            if hasLabel:
-                for i in range(len(boxes[hash_value])):
-                    if boxes[hash_value][i][0] == label:
-                        boxes[hash_value][i] = (label, focal)
-            else:
-                boxes[hash_value].append((label, focal))
+
+        box_num = hash(label)
+        if "=" in s:
+            boxes[box_num][label] = focal
+        else:
+            boxes[box_num].pop(label)
 
     res = 0
-    for i, j in boxes.items():
-        for k in range(len(j)):
-            res += (i + 1) * (k + 1) * j[k][1]
+    for i, box in boxes.items():
+        for j, k in enumerate(box.values()):
+            res += (i + 1) * (j + 1) * k
 
     return res
 
