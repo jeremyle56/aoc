@@ -1,4 +1,4 @@
-import sys
+import re, sys
 
 
 def hash(s):
@@ -24,18 +24,12 @@ def solve_p2():
     boxes = {i: {} for i in range(256)}
 
     for s in lines:
-        focal = None
-        if "-" in s:
-            label = s.split("-")[0]
-        else:
-            label = s.split("=")[0]
-            focal = int(s.split("=")[1])
-
+        label, focal = re.findall(r"([^=|-]*)(.*)", s)[0]
         box_num = hash(label)
         if "=" in s:
-            boxes[box_num][label] = focal
+            boxes[box_num][label] = int(focal[1:])
         else:
-            boxes[box_num].pop(label, "bruh")
+            boxes[box_num].pop(label, "python werid")
 
     res = 0
     for i, box in boxes.items():
