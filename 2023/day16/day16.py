@@ -7,10 +7,10 @@ dirs = {"up": [-1, 0], "down": [1, 0], "left": [0, -1], "right": [0, 1]}
 # start_pos is off the grid, i.e. start of Part 1 is [0, -1]
 def bfs(start_pos, start_dir):
     marked = set()
-    stack = [(start_pos, dirs[start_dir])]
+    queue = [(start_pos, dirs[start_dir])]
 
-    while len(stack):
-        start, dir = stack.pop()
+    while len(queue):
+        start, dir = queue.pop()
         x, y = start
         dx, dy = dir
 
@@ -25,17 +25,17 @@ def bfs(start_pos, start_dir):
             continue
 
         if layout[x][y] == "/":
-            stack.append(([x, y], [-dy, -dx]))
+            queue.append(([x, y], [-dy, -dx]))
         elif layout[x][y] == "\\":
-            stack.append(([x, y], [dy, dx]))
+            queue.append(([x, y], [dy, dx]))
         elif layout[x][y] == "|" and dy != 0:
-            stack.append(([x, y], dirs["up"]))
-            stack.append(([x, y], dirs["down"]))
+            queue.append(([x, y], dirs["up"]))
+            queue.append(([x, y], dirs["down"]))
         elif layout[x][y] == "-" and dx != 0:
-            stack.append(([x, y], dirs["left"]))
-            stack.append(([x, y], dirs["right"]))
+            queue.append(([x, y], dirs["left"]))
+            queue.append(([x, y], dirs["right"]))
         else:
-            stack.append(([x, y], [dx, dy]))
+            queue.append(([x, y], [dx, dy]))
 
     return len({(x, y) for x, y, _, _ in marked}) - 1
 
