@@ -34,6 +34,5 @@ plan = [[x, int(y)] for x, y, _ in temp]
 temp1 = [i[2][2:-1] for i in temp]
 hex = [[directions[int(i[-1])], int(i[:5], 16)] for i in temp1]
 
-
 print(f"Answer for Part 1: {solve(False)}")
 print(f"Answer for Part 2: {solve(True)}")
