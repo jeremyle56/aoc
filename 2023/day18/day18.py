@@ -32,7 +32,6 @@ temp = [i.split() for i in lines]
 plan = [[x, int(y)] for x, y, _ in temp]
 
 temp1 = [i[2][2:-1] for i in temp]
-print(temp1)
 hex = [[directions[int(i[-1])], int(i[:5], 16)] for i in temp1]
 
 
