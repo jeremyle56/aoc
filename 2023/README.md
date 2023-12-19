@@ -4,7 +4,7 @@ I don't know what language I'll use, probably C++ to start.
 
 Moved to Python because dealing with string in C++ is annoying.
 
-Progress: 33/34 ⭐
+Progress: 37/38 ⭐
 
 | Day                                                                           | Language                                                   | Stars |
 | ----------------------------------------------------------------------------- | ---------------------------------------------------------- | ----- |
@@ -23,8 +23,10 @@ Progress: 33/34 ⭐
 | [Day 13: Point of Incidence](https://adventofcode.com/2023/day/13)            | [Python](./day13/day13.py)                                 | ⭐⭐  |
 | [Day 14: Parabolic Reflector Dish](https://adventofcode.com/2023/day/14)      | [Python](./day14/day14.py)                                 | ⭐⭐  |
 | [Day 15: Lens Library](https://adventofcode.com/2023/day/15)                  | [Python](./day15/day15.py)                                 | ⭐⭐  |
-| [Day 16: Lens Library](https://adventofcode.com/2023/day/16)                  | [Python](./day16/day16.py)                                 | ⭐⭐  |
-| [Day 17: Lens Library](https://adventofcode.com/2023/day/17)                  | [Python](./day17/day17.py)                                 | ⭐⭐  |
+| [Day 16: The Floor Will Be Lava](https://adventofcode.com/2023/day/16)        | [Python](./day16/day16.py)                                 | ⭐⭐  |
+| [Day 17: Clumsy Crucible](https://adventofcode.com/2023/day/17)               | [Python](./day17/day17.py)                                 | ⭐⭐  |
+| [Day 18: Lavaduct Lagoon](https://adventofcode.com/2023/day/18)               | [Python](./day18/day18.py)                                 | ⭐⭐  |
+| [Day 19: Aplenty](https://adventofcode.com/2023/day/19)                       | [Python](./day19/day19.py)                                 | ⭐⭐  |
 
 C++ Template courtesy of https://github.com/osalbahr. Inspired and modified.
 
