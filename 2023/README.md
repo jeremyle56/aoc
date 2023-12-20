@@ -4,7 +4,7 @@ I don't know what language I'll use, probably C++ to start.
 
 Moved to Python because dealing with string in C++ is annoying.
 
-Progress: 37/38 ⭐
+Progress: 39/40 ⭐
 
 | Day                                                                           | Language                                                   | Stars |
 | ----------------------------------------------------------------------------- | ---------------------------------------------------------- | ----- |
@@ -27,6 +27,7 @@ Progress: 37/38 ⭐
 | [Day 17: Clumsy Crucible](https://adventofcode.com/2023/day/17)               | [Python](./day17/day17.py)                                 | ⭐⭐  |
 | [Day 18: Lavaduct Lagoon](https://adventofcode.com/2023/day/18)               | [Python](./day18/day18.py)                                 | ⭐⭐  |
 | [Day 19: Aplenty](https://adventofcode.com/2023/day/19)                       | [Python](./day19/day19.py)                                 | ⭐⭐  |
+| [Day 20: Pulse Propagation](https://adventofcode.com/2023/day/20)             | [Python](./day20/day20.py)                                 | ⭐⭐  |
 
 C++ Template courtesy of https://github.com/osalbahr. Inspired and modified.
 
