@@ -30,9 +30,9 @@ Progress: 50/50 ⭐
 | [Day 20: Pulse Propagation](https://adventofcode.com/2023/day/20)             | [Python](./day20/day20.py)                                 | ⭐⭐  |
 | [Day 21: Step Counter](https://adventofcode.com/2023/day/21)                  | [Python](./day21/day21.py)                                 | ⭐⭐  |
 | [Day 22: Sand Slabs](https://adventofcode.com/2023/day/22)                    | [Python](./day22/day22.py)                                 | ⭐⭐  |
-| [Day 23: A Long Walk](https://adventofcode.com/2023/day/23)                   | [Python](./day22/day23.py)                                 | ⭐⭐  |
-| [Day 24: Never Tell Me the Odds](https://adventofcode.com/2023/day/24)        | [Python](./day22/day24.py)                                 | ⭐⭐  |
-| [Day 25: Snowverload](https://adventofcode.com/2023/day/25)                   | [Python](./day22/day25.py)                                 | ⭐⭐  |
+| [Day 23: A Long Walk](https://adventofcode.com/2023/day/23)                   | [Python](./day23/day23.py)                                 | ⭐⭐  |
+| [Day 24: Never Tell Me the Odds](https://adventofcode.com/2023/day/24)        | [Python](./day24/day24.py)                                 | ⭐⭐  |
+| [Day 25: Snowverload](https://adventofcode.com/2023/day/25)                   | [Python](./day25/day25.py)                                 | ⭐⭐  |
 
 C++ Template courtesy of https://github.com/osalbahr. Inspired and modified.
 
