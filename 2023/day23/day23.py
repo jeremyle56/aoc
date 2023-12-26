@@ -1,32 +1,28 @@
+from collections import defaultdict
 import sys
 
 sys.setrecursionlimit(1000000)
 
 
-def get_neighbours_part1(x, y):
+def get_neighbours(graph, x, y):
     neighbours = [(x - 1, y), (x + 1, y), (x, y - 1), (x, y + 1)]
-    if trail[x][y] == ">":
+    if graph[x][y] == ">":
         neighbours = [(x, y + 1)]
-    elif trail[x][y] == "v":
+    elif graph[x][y] == "v":
         neighbours = [(x + 1, y)]
-    elif trail[x][y] == "<":
+    elif graph[x][y] == "<":
         neighbours = [(x, y - 1)]
-    elif trail[x][y] == "^":
+    elif graph[x][y] == "^":
         neighbours = [(x - 1, y)]
 
-    return [(nx, ny) for nx, ny in neighbours if trail[nx][ny] != "#"]
+    return [(nx, ny) for nx, ny in neighbours if graph[nx][ny] != "#"]
 
 
-def get_neighbours_part2(x, y):
-    neighbours = [(x - 1, y), (x + 1, y), (x, y - 1), (x, y + 1)]
-    return [(nx, ny) for nx, ny in neighbours if trail[nx][ny] != "#"]
-
-
-def dfs(x, y, visited, part2=False):
+def dfs(graph, x, y, visited):
     if (x, y) == end:
         return len(visited)
 
-    neighbours = get_neighbours_part2(x, y) if part2 else get_neighbours_part1(x, y)
+    neighbours = get_neighbours(graph, x, y)
 
     res = 0
     for n in neighbours:
@@ -35,7 +31,7 @@ def dfs(x, y, visited, part2=False):
             continue
 
         visited.add(n)
-        val = dfs(a, b, visited, part2)
+        val = dfs(graph, a, b, visited)
         res = max(res, val)
         visited.remove(n)
 
@@ -46,14 +42,54 @@ def dfs(x, y, visited, part2=False):
 
 
 def solve_p1():
-    return dfs(start[0], start[1], set())
+    return dfs(trail, start[0], start[1], set())
 
 
 ###############################################################################
 
 
+# Help from: https://github.com/mgtezak/Advent_of_Code/blob/master/2023/Day_23.py
 def solve_p2():
-    return dfs(start[0], start[1], set(), True)
+    new_trail = [[("#" if i == "#" else ".") for i in j] for j in trail]
+
+    graph = defaultdict(list)
+    q = [(start, start, {start})]
+
+    while len(q):
+        curr, prev, visited = q.pop(0)
+        if curr == end:
+            final_node = prev
+            final_steps = len(visited) - 1
+            continue
+
+        x, y = curr
+        neighbours = [i for i in get_neighbours(new_trail, x, y) if i not in visited]
+
+        if len(neighbours) == 1:
+            next = neighbours.pop()
+            q.append((next, prev, visited | {next}))
+        elif len(neighbours) > 1:
+            steps = len(visited) - 1
+            if (curr, steps) in graph[prev]:
+                continue
+            graph[prev].append((curr, steps))
+            graph[curr].append((prev, steps))
+            while neighbours:
+                next = neighbours.pop(0)
+                q.append((next, curr, {curr, next}))
+
+    max_steps = 0
+    queue = [(start, 0, {start})]
+    while queue:
+        curr, steps, visited = queue.pop()
+        if curr == final_node:
+            max_steps = max(steps, max_steps)
+            continue
+        for nxt, distance in graph[curr]:
+            if nxt not in visited:
+                queue.append((nxt, steps + distance, visited | {nxt}))
+
+    return max_steps + final_steps
 
 
 ###############################################################################

@@ -4,7 +4,7 @@ I don't know what language I'll use, probably C++ to start.
 
 Moved to Python because dealing with string in C++ is annoying.
 
-Progress: 43/44 ⭐
+Progress: 50/50 ⭐
 
 | Day                                                                           | Language                                                   | Stars |
 | ----------------------------------------------------------------------------- | ---------------------------------------------------------- | ----- |
@@ -12,7 +12,7 @@ Progress: 43/44 ⭐
 | [Day 2: Cube Conundrum](https://adventofcode.com/2023/day/2)                  | [C++](./day02/day02.cpp)                                   | ⭐⭐  |
 | [Day 3: Gear Ratios](https://adventofcode.com/2023/day/3)                     | [C++](./day03/day03.cpp)                                   | ⭐⭐  |
 | [Day 4: Scratchcards](https://adventofcode.com/2023/day/4)                    | [Python](./day04/day04.py)                                 | ⭐⭐  |
-| [Day 5: If You Give A Seed A Fertilizer](https://adventofcode.com/2023/day/5) | [Python](./day05/day05.py)                                 | ⭐❌  |
+| [Day 5: If You Give A Seed A Fertilizer](https://adventofcode.com/2023/day/5) | [Python](./day05/day05.py)                                 | ⭐⭐  |
 | [Day 6: Wait For It](https://adventofcode.com/2023/day/6)                     | [Python](./day06/day06.py), [C++](./day06/day06.cpp)       | ⭐⭐  |
 | [Day 7: Camel Cards](https://adventofcode.com/2023/day/7)                     | Python: [P1](./day07/day07_1.py), [P2](./day07/day07_2.py) | ⭐⭐  |
 | [Day 8: Haunted Wasteland](https://adventofcode.com/2023/day/8)               | [Python](./day08/day08.py)                                 | ⭐⭐  |
@@ -30,6 +30,9 @@ Progress: 43/44 ⭐
 | [Day 20: Pulse Propagation](https://adventofcode.com/2023/day/20)             | [Python](./day20/day20.py)                                 | ⭐⭐  |
 | [Day 21: Step Counter](https://adventofcode.com/2023/day/21)                  | [Python](./day21/day21.py)                                 | ⭐⭐  |
 | [Day 22: Sand Slabs](https://adventofcode.com/2023/day/22)                    | [Python](./day22/day22.py)                                 | ⭐⭐  |
+| [Day 23: A Long Walk](https://adventofcode.com/2023/day/23)                   | [Python](./day22/day23.py)                                 | ⭐⭐  |
+| [Day 24: Never Tell Me the Odds](https://adventofcode.com/2023/day/24)        | [Python](./day22/day24.py)                                 | ⭐⭐  |
+| [Day 25: Snowverload](https://adventofcode.com/2023/day/25)                   | [Python](./day22/day25.py)                                 | ⭐⭐  |
 
 C++ Template courtesy of https://github.com/osalbahr. Inspired and modified.
 
