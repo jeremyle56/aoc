@@ -14,9 +14,9 @@ fn solve_p2(l1 : Vec<i32>, l2: Vec<i32>) {
 }
 
 fn main() {
-    let input = fs::read_to_string("./in.txt").expect("Unable to read file");
-
+    let input = fs::read_to_string("./in.txt").unwrap();
     let lines: Vec<&str> = input.lines().collect();
+
     let mut l1 = Vec::new();
     let mut l2 = Vec::new();
 
