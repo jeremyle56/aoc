@@ -2,7 +2,7 @@
 
 AOC is hard...
 
-### Repository Structure
+## Repository Structure
 
 ```bash
 aoc
@@ -14,7 +14,8 @@ aoc
 
 ## 📈 Progress
 
-| Year | Stars | Languages     |
-| ---- | ----- | ------------- |
-| 2022 | 38⭐  | C, Javascript |
-| 2023 | 50⭐  | C++, Python   |
+| Year | Stars       | Languages     |
+| ---- | ----------- | ------------- |
+| 2022 | 38⭐        | C, Javascript |
+| 2023 | 50⭐        | C++, Python   |
+| 2024 | In progress | Rust          |
