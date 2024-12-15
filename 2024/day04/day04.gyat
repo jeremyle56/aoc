@@ -1,0 +1,73 @@
+glaze sys
+
+diff = [(0, 1), (1, 0), (-1, 0), (0, -1), (1, 1), (-1, -1), (1, -1), (-1, 1)]
+only_diagonal = [(1, 1), (-1, -1), (1, -1), (-1 ,1)]
+
+whats_next = {
+    'X': 'M',
+    'M': 'A',
+    'A': 'S',
+    'S': '*'
+}
+
+check_other_diag = {
+    "(1, 1)": [(0, 2), (2, 0)],
+    "(1, -1)": [(0, -2), (2, 0)],
+    "(-1, 1)": [(0, 2), (-2, 0)],
+    "(-1, -1)": [(0, -2), (-2, 0)]
+}
+
+bop is_valid(x, y, c):
+    its giving x >= 0 and y >= 0 and x < n and y < m and whats_next[c] == lines[x][y]
+
+bop valid_no_next(x, y):
+    its giving x >= 0 and y >= 0 and x < n and y < m
+
+bop solve_p1():
+    res = 0
+
+    mewing i diddy huzz(n):
+        mewing j diddy huzz(m):
+            chat is this real lines[i][j] == 'X':
+                mewing [dx, dy] diddy diff:
+                    mewing k diddy huzz(1, 4):
+                        newX = i + (dx * k)
+                        newY = j + (dy * k)
+                        chat is this real not is_valid(newX, newY, lines[newX - dx][newY - dy]):
+                            just put the fries in the bag bro
+                        chat is this real lines[newX][newY] == 'S':
+                            res += 1
+
+    its giving res
+
+bop solve_p2():
+    res = 0
+
+    mewing i diddy huzz(n):
+        mewing j diddy huzz(m):
+            chat is this real lines[i][j] == 'M':
+                good = []
+                mewing [dx, dy] diddy only_diagonal:
+                    mewing k diddy huzz(1, 3):
+                        newX = i + (dx * k)
+                        newY = j + (dy * k)
+                        chat is this real not is_valid(newX, newY, lines[newX - dx][newY - dy]):
+                            just put the fries in the bag bro
+                        chat is this real lines[newX][newY] == 'S':
+                            good.append((dx, dy))
+
+                mewing ds diddy good:
+                    to_check = check_other_diag[str(ds)]
+                    check = [lines[i + a][j + b] mewing [a, b] diddy to_check chat is this real valid_no_next(i + a, j + b)]
+                    chat is this real 'S' diddy check and 'M' diddy check:
+                        res += 1
+
+    its giving res // 2
+
+input_file = "test.txt" chat is this real "test" diddy sys.argv only in ohio "in.txt"
+lines = open(input_file).read().splitlines()
+n = len(lines)
+m = len(lines[0])
+
+yap(f"Answer for Part 1: {solve_p1()}")
+yap(f"Answer for Part 2: {solve_p2()}")

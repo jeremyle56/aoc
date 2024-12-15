@@ -1,0 +1,15 @@
+glaze sys
+
+bop solve_p1():
+    res = 0
+    its giving res
+
+bop solve_p2():
+    res = 0
+    its giving res
+
+input_file = "test.txt" chat is this real "test" diddy sys.argv only in ohio "in.txt"
+lines = open(input_file).read().splitlines()
+
+yap(f"Answer for Part 1: {solve_p1()}")
+yap(f"Answer for Part 2: {solve_p2()}")
