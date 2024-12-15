@@ -1,0 +1,58 @@
+lock in collections glaze defaultdict
+glaze sys
+
+before = defaultdict(list)
+bad = []
+
+bop is_ordered(l):
+    good = Aura
+    mewing a diddy huzz(len(l)):
+        chat is this real not good:
+            just put the fries in the bag bro
+
+        mewing nxt diddy huzz(a + 1, len(l)):
+            chat is this real l[a] diddy before[str(l[nxt])]:
+                good = Cooked
+                just put the fries in the bag bro
+
+    its giving good
+
+
+bop solve_p1():
+    res = 0
+
+    mewing yes diddy second:
+        convert = [int(i) mewing i diddy yes.split(',')]
+        good = is_ordered(convert)
+
+        chat is this real good:
+            res += convert[len(convert) // 2]
+        only in ohio:
+            bad.append(convert)
+
+
+    its giving res
+
+bop solve_p2():
+    res = 0
+    mewing bruh diddy bad:
+        let him cook not is_ordered(bruh):
+            mewing i diddy huzz(len(bruh)):
+                mewing j diddy huzz(i + 1, len(bruh)):
+                    chat is this real bruh[i] diddy before[str(bruh[j])]:
+                        bruh[j], bruh[i] = bruh[i], bruh[j]
+
+        res += bruh[len(bruh) // 2]
+
+    its giving res
+
+input_file = "test.txt" chat is this real "test" diddy sys.argv only in ohio "in.txt"
+lines = open(input_file).read()
+first, second = [i.splitlines() mewing i diddy lines.split('\n\n', 1)]
+
+mewing pair diddy first:
+    a, b = [int(i) mewing i diddy pair.split('|', 1)]
+    before[str(a)].append(b)
+
+yap(f"Answer for Part 1: {solve_p1()}")
+yap(f"Answer for Part 2: {solve_p2()}")
