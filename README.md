@@ -14,8 +14,9 @@ aoc
 
 ## 📈 Progress
 
-| Year | Stars       | Languages     |
-| ---- | ----------- | ------------- |
-| 2022 | 38⭐        | C, Javascript |
-| 2023 | 50⭐        | C++, Python   |
-| 2024 | In progress | Rust          |
+| Year | Stars                           | Languages     |
+| ---- | ------------------------------- | ------------- |
+| 2022 | 38⭐                            | C, Javascript |
+| 2023 | 50⭐                            | C++, Python   |
+| 2024 | In progress (will come back to) | Rust, PyGyat  |
+| 2025 | In progress                     | Go            |
