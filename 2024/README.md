@@ -4,7 +4,7 @@ TIME TO LEARN CRAB LANGUAGE THIS YEAR!!!
 
 Edit: Went and learnted [PyGyat](https://github.com/shamith09/pygyat). Looking forward to future development.
 
-Progress: 8/50 ⭐
+Progress: 10/50 ⭐
 
 | Day                                                              | Language                     | Stars |
 | ---------------------------------------------------------------- | ---------------------------- | ----- |
